@@ -106,7 +106,14 @@ function getDOMElements() {
 
 document.addEventListener('DOMContentLoaded', function () {
   console.log('Script loaded!');
-  handleFloatingLabel();
-  //handlePasswordSwitcher();
-  //getDOMElements();
+  if(document.querySelector('.js-input')){
+  handleFloatingLabel();}
+  if(document.querySelector('.js-chec')){
+  handlePasswordSwitcher();}
+  if (
+    document.querySelector('.js-sign-in-button') ||
+    document.querySelector('.js-input')
+  ) {
+    getDOMElements();
+  }
 })
